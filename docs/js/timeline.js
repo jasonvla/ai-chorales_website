@@ -117,7 +117,7 @@ function buildTrainingPhase(training_trials) {
           audioElement.play();
           playButton.style.backgroundColor = '#888';
           playButton.style.cursor = 'default';
-        });
+          }, {once: true});
       },
       data: { stimulus: trial_info.file, correct: trial_info.label, training: true, timestamp: timestamp },
       on_finish: function(data) {
@@ -171,7 +171,7 @@ function buildAudioTrials(shuffled_files) {
           audioElement.play();
           playButton.style.backgroundColor = '#888';
           playButton.style.cursor = 'default';
-        });
+        }, {once: true});
       },
       data: function() {
         return {
